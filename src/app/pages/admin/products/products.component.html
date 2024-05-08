@@ -1,14 +1,16 @@
-<div class="class">
-    <div class="col-8">
+<div class="row">
+    <div [ngClass]="isSidePanelVisible? 'col-8': 'col-12'" >
+        <div class="card">
         <div class = "card-header bg-primary">
             <div class="row">
                 <div class="col-6">
                     Product List
                 </div>
                 <div class="col-6 text-end">
-                    <button class = "btn btn-sm btn-success">New</button>
+                    <button class = "btn btn-sm btn-success" (click)="openSidePanel()">New</button>
                 </div>
             </div>
+        </div>
         </div>
         <div class="card-body">
 
@@ -17,11 +19,11 @@
     <div class="col-4" *ngIf="isSidePanelVisible">
         <div class = "card-header bg-primary">
             <div class="row">
-                <div class="col-6 text-end">
+                <div class="col-6">
                     New Product List
                 </div>
-                <div class="col-6">
-                    <button class = "btn btn-sm btn-success">Close</button>
+                <div class="col-6 text-end">
+                    <button class = "btn btn-sm btn-success" (click)="closeSidePanel()">Close</button>
                 </div>
             </div>
         </div>

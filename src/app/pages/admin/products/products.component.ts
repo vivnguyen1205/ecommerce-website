@@ -11,6 +11,13 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './products.component.css'
 })
 export class ProductsComponent {
-  isSidePanelVisible: boolean = true;
+  isSidePanelVisible: boolean = false;
+
+  openSidePanel() {
+    this.isSidePanelVisible = true;
+  }
+  closeSidePanel() {
+    this.isSidePanelVisible = false;
+  }
 
 }
