@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
-
+import { ProductService } from '../../../services/product/product.service';
 
 @Component({
   selector: 'app-products',
@@ -25,7 +25,12 @@ export class ProductsComponent {
     "categoryId":0,
     "productImageUrl":"",
   
-  };
+  }
+  constructor(private productSrv: ProductService) { 
+
+
+  }
+
 
   openSidePanel() {
     this.isSidePanelVisible = true;
