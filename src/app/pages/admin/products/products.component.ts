@@ -12,19 +12,19 @@ import { RouterOutlet } from '@angular/router';
 })
 export class ProductsComponent {
   isSidePanelVisible: boolean = false;
-  productObj: any = {
-    "productId":0,
-    "productSku":"",
-    "productName":"",
-    "productPrice":0,
-    "productShortName":"",
-    "productDescription":"",
-    "createdDate": new Date(),
-    "deliveryTime":"",
-    "categoryId":0,
-    "productImageUrl":"",
+  // productObj: any = {
+  //   "productId":0,
+  //   "productSku":"",
+  //   "productName":"",
+  //   "productPrice":0,
+  //   "productShortName":"",
+  //   "productDescription":"",
+  //   "createdDate": new Date(),
+  //   "deliveryTime":"",
+  //   "categoryId":0,
+  //   "productImageUrl":"",
   
-  };
+  // };
 
   openSidePanel() {
     this.isSidePanelVisible = true;
