@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { ProductService } from '../../../services/product/product.service';
@@ -11,7 +11,7 @@ import { ProductService } from '../../../services/product/product.service';
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
-export class ProductsComponent {
+export class ProductsComponent implements OnInit{
   isSidePanelVisible: boolean = false;
   productObj: any = {
     "productId":0,
@@ -25,12 +25,23 @@ export class ProductsComponent {
     "categoryId":0,
     "productImageUrl":"",
   
-  }
+  };
+  categoryList: any = []=[];
   constructor(private productSrv: ProductService) { 
 
 
   }
+  ngOnInit(): void {
+    this.getAllCategory();
+    
+  }
 
+  getAllCategory() {
+    this.productSrv.getCategory().subscribe((res: any) => {
+      this.categoryList = res.data;
+    })
+  }
+  
 
   openSidePanel() {
     this.isSidePanelVisible = true;

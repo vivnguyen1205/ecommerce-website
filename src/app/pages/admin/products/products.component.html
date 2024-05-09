@@ -95,8 +95,9 @@
                 <div class="col-6">
                     <label for="">Category</label>
                     <select [(ngModel)]="productObj.categoryId" class="form-select">
-                        <!-- <option *ngFor="let cate of categoryList" [value]="cate.categoryId"> {{cate.categoryName}}</option> -->
-                    </select> 
+                            <option *ngFor="let cate of categoryList" [value]="cate.categoryId"> {{cate.categoryName}}</option>
+                        </select> 
+                
                 </div>
                 <div class="col-6">
                     <label for="">Deliver Time Span</label>
