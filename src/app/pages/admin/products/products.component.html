@@ -53,7 +53,7 @@
             </div>
             
 
-
+''
         </div>
     </div>
     <div class="col-4" *ngIf="isSidePanelVisible">
@@ -95,15 +95,14 @@
                 <div class="col-6">
                     <label for="">Category</label>
                     <select [(ngModel)]="productObj.categoryId" class="form-select">
-                            <option *ngFor="let cate of categoryList" [value]="cate.categoryId"> {{cate.categoryName}}</option>
-                        </select> 
-                
+                        <option *ngFor="let cate of categoryList" [value]="cate.categoryId"> {{cate.categoryName}}</option>
+                        </select>
                 </div>
                 <div class="col-6">
-                    <label for="">Deliver Time Span</label>
+                    <label for="">Delivery Time </label>
                     <input type="text" [(ngModel)]="productObj.deliveryTime" class="form-control">
-
                 </div>
+                
             </div>
             <div class="row">
                 <div class="col-12">
@@ -116,6 +115,7 @@
                     <label for="">Product Description</label>
                     <textarea rows="4"  [(ngModel)]="productObj.productDescription" ></textarea>
                 </div>
+
 
         <!-- </div>
         <div class="row pt-2">

@@ -12,7 +12,7 @@ export class ProductService {
   constructor(private http: HttpClient) { }
 
   getCategory() {
-    return this.http.get(Constant.API_END_POINT + Constant.METHODS.GET_ALL_CATEGORY);
+    return this.http.get(Constant.API_END_POINT);
   }
 }
 
