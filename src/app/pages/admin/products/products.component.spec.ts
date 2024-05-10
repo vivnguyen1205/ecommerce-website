@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ProductsComponent } from './products.component';
-import { CommonModule } from '@angular/common';
 
 
 describe('ProductsComponent', () => {
@@ -22,5 +21,3 @@ describe('ProductsComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-
-

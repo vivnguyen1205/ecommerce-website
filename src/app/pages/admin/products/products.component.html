@@ -30,7 +30,51 @@
 
             </div>
             
-
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="card" >
+                            <img class="card-img-top" src=pho.png alt="Card image">
+                            <div class="card-body">
+                              <h4 class="card-title">Pho</h4>
+                              <p class="card-text">Some example text.</p>
+                              <a href="#" class="btn btn-primary">See Profile</a>
+                            </div>
+                          </div>
+    
+    
+                    </div>
+                    <div class="col-3">
+                        <div class="card" >
+                            <img class="card-img-top" src="/Users/viviannguyen/ecommerce2/src/app/pages/admin/products/pho.png" alt="Card image">
+                            <div class="card-body">
+                              <h4 class="card-title">Bun Bo Hue</h4>
+                              <p class="card-text">Some example text.</p>
+                              <a href="#" class="btn btn-primary">See Profile</a>
+                            </div>
+                          </div>
+    
+    
+                    </div><div class="col-3">
+                        <div class="card" >
+                            <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                            <div class="card-body">
+                              <h4 class="card-title">Banh Xeo</h4>
+                              <p class="card-text">Some example text.</p>
+                              <a href="#" class="btn btn-primary">See Profile</a>
+                            </div>
+                          </div>
+    
+    
+                    </div>
+    
+    
+                </div>
+    
+    
+    
+            </div>
+        </div>
 ''
         </div>
     </div>
@@ -76,14 +120,7 @@
                         <option *ngFor="let cate of categoryList" [value]="cate.categoryId"> {{cate.categoryName}}</option>
                         </select>
                 </div>
-                <div class="row">
-                    <div class="col-6">
-                        <button class="btn btn-success"> Reset </button>
-                    </div>
-                    <div class="col-6">
-                        <button class="btn btn-success" (click)="onSave()"> Create Product</button>
-                    </div>
-                </div>
+                
                 <div class="col-6">
                     <label for="">Delivery Time Span</label>
                     <input type="text" [(ngModel)]="productObj.deliveryTime" class="form-control">
@@ -100,6 +137,14 @@
                 <div class="col-12">
                     <label for="">Product Description</label>
                     <textarea rows="4"  [(ngModel)]="productObj.productDescription" ></textarea>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="btn btn-success"> Reset </button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-success" (click)="onSave()"> Create Product</button>
+                    </div>
                 </div>
 
 
