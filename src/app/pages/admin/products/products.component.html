@@ -22,61 +22,11 @@
                           <a href="#" class="btn btn-primary">See Profile</a>
                         </div>
                       </div>
-                      
 
-                </div>
-                
-                
+                    </div> 
 
             </div>
-            
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-3">
-                        <div class="card" >
-                            <img class="card-img-top" src=pho.png alt="Card image">
-                            <div class="card-body">
-                              <h4 class="card-title">Pho</h4>
-                              <p class="card-text">Some example text.</p>
-                              <a href="#" class="btn btn-primary">See Profile</a>
-                            </div>
-                          </div>
-    
-    
-                    </div>
-                    <div class="col-3">
-                        <div class="card" >
-                            <img class="card-img-top" src="/Users/viviannguyen/ecommerce2/src/app/pages/admin/products/pho.png" alt="Card image">
-                            <div class="card-body">
-                              <h4 class="card-title">Bun Bo Hue</h4>
-                              <p class="card-text">Some example text.</p>
-                              <a href="#" class="btn btn-primary">See Profile</a>
-                            </div>
-                          </div>
-    
-    
-                    </div><div class="col-3">
-                        <div class="card" >
-                            <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-                            <div class="card-body">
-                              <h4 class="card-title">Banh Xeo</h4>
-                              <p class="card-text">Some example text.</p>
-                              <a href="#" class="btn btn-primary">See Profile</a>
-                            </div>
-                          </div>
-    
-    
-                    </div>
-    
-    
-                </div>
-    
-    
-    
-            </div>
-        </div>
-''
-        </div>
+         </div>   
     </div>
     <div class="col-4" *ngIf="isSidePanelVisible">
         <div class="card">
@@ -142,24 +92,13 @@
                     <div class="col-6">
                         <button class="btn btn-success"> Reset </button>
                     </div>
-                    <div class="col-6">
-                        <button class="btn btn-success" (click)="onSave()"> Create Product</button>
+                    <div class="col-6 text-center">
+                        <button class="btn btn-success" *ngIf="productObj.productId == 0" (click)="onSave()"> Create Product</button>
                     </div>
                 </div>
 
-
-        <!-- </div>
-        <div class="row pt-2">
-            <div class="col-6 text-center">
-               <button class="btn btn-success">Reset</button>
-            </div>
-            <div class="col-6 text-center">
-                <button class="btn btn-success" *ngIf="productObj.productId == 0" (click)="onSave()">Create Product</button>
-                <button class="btn btn-primary" *ngIf="productObj.productId !==0" (click)="onUpdate()">Update Product</button>
             </div>
         </div>
     </div>
 </div>
 </div>
-</div>
-    </div> -->

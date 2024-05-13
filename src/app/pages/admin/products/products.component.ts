@@ -50,6 +50,7 @@ export class ProductsComponent implements OnInit{
   }
   onSave(){
     this.productSrv.saveProduct(this.productObj).subscribe((res: any) => {
+      debugger;
       if(res.result){
         alert("product created")
         this.getProducts();
