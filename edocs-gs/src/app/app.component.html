@@ -1,0 +1,32 @@
+<div class="students-record">
+
+<table class="table table-striped record-table">
+  <thead>
+    <tr>
+      <th scope="col" sortable="#" (sort)="onSort($event)">#</th >
+      <th sscope="col">name</th >
+      <th scope="col">city</th >
+      <th scope="col">country</th >
+      <th scope="col">age</th >
+      <th scope="col">state</th >
+  </thead>
+  <tbody>
+    @for (student of students; track student.name; let i = $index){
+      <tr>
+        <th >{{i+1}}</th >
+        <td>{{student.name}}</td>
+        <td>{{student.city}}</td>
+        <td>{{student.country}}</td>
+        <td>{{student.age}}</td>
+        <td>{{student.state}}</td>
+      
+      </tr>
+       } @empty{
+        <tr>
+      <p> No data found </p>
+      </tr>
+    }
+    </tbody>
+</table>
+  
+</div>
